@@ -1,0 +1,20 @@
+@import './variables';
+
+@mixin navBtn($width, $height, $bgColor, $color, $radius) {
+    width: $width;
+    height: $height;
+    background-color: $bgColor;
+    color: $color;
+    border-radius: $radius;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 600;
+    transition: all 250ms ease-in-out;
+
+    &:hover {
+        opacity: 90%;
+        color: $color;
+    }
+}

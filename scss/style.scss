@@ -1,0 +1,135 @@
+@import './variables';
+@import './components';
+
+/*
+ * font
+ */
+
+@font-face {
+    font-family: "JetBrains Sans";
+    src: url("/font/JetBrainsSans-Regular.woff");
+}
+
+/*
+ * scrollbar style
+ */
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: $white-color;
+    border-left: 1px solid $border-color;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+    border: 3px solid $white-color;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 70%);
+}
+
+/*
+ * Body style
+ */
+
+body {
+    margin: 0px;
+    font-family: "JetBrains Sans";
+    color: $text-color;
+}
+
+/*
+ * line
+ */
+
+hr {
+    margin: 0px;
+}
+
+/*
+ * text selection style
+ */
+
+*::selection {
+    background-color: $bg-color;
+    color: $white-color
+}
+
+/*
+ * navbar style
+ */
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-color
+}
+
+/*
+ * Buttons
+ */
+
+.navBtn {
+    @include navBtn(auto, 36px, $bg-color, $white-color, 30px);
+    padding: 8px 16px;
+    line-height: 24px;
+}
+
+.socialBtn {
+    @include navBtn(48px, 48px, $bg-color, $white-color, 50px);
+    line-height: 48px;
+}
+
+.primaryBtn {
+    @include navBtn(auto, 48px, $bg-color, $white-color, 30px);
+    padding: 8px 34px;
+    line-height: 32px;
+}
+
+.secondaryBtn {
+    @include navBtn(auto, 48px, $white-color, $bg-color, 30px);
+    border: 2px solid $bg-color;
+    padding: 8px 34px;
+    line-height: 30px;
+
+    &:hover {
+        background-color: $bg-color;
+        color: $white-color;
+    }
+}
+
+.btt {
+    color: $white-color;
+    background-color: $bg-color;
+    font-size: 32px;
+    line-height: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    &.active {
+        visibility: visible;
+    }
+
+    &:hover {
+        color: white;
+        background-color: #ffaf38;
+    }
+}
+
+/*
+ * text color
+ */
+
+.primaryText {
+    color: $bg-color
+}
